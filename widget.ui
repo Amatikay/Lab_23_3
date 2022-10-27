@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>836</width>
+    <height>715</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>311</width>
+     <height>451</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="OpenFieleObserver_pushButton">
+      <property name="text">
+       <string>Open Fiele</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="TypeChart_comboBox">
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="currentText">
+       <string>LineChrat</string>
+      </property>
+      <property name="maxVisibleItems">
+       <number>2</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>LineChrat</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Histogram</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QCheckBox" name="Colorful_checkBox">
+      <property name="text">
+       <string>Colorful/Black-White</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Print_pushButton">
+      <property name="text">
+       <string>Print</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="SelectFolderToSavePdf_pushButton">
+      <property name="text">
+       <string>Select Folder to save PDF</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>10</y>
+     <width>441</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
