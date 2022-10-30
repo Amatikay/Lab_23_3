@@ -3,13 +3,13 @@
 
 #include <QWidget>
 #include <QFileDialog>
-#include <QDebug> //для отладки, но какая из библиотек нужна пока не понятно
-#include <QtDebug> //
+#include <QDebug>
+#include <QtDebug>
 #include <QtWidgets>
 #include <QWidget>
 #include <cstdio>
 #include <cstdlib>
-
+#include <QSqlTableModel>
 #include <QTableView>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -23,6 +23,8 @@ private slots:
     void on_OpenFieleObserver_pushButton_clicked(); // открывалка фалового обозревателя
     void on_SelectFolderToSavePdf_pushButton_clicked();//выбор папки для сохрениния пдф
     void on_Print_pushButton_clicked();//печать
+    void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
+
 public:
     Widget(QWidget *parent = nullptr);
     ~Widget();

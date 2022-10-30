@@ -15,6 +15,10 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick Sql)
 find_package(Qt${QT_VERSION_MAJOR}Sql REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR}Charts REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Charts)
+
+
 
 
 set(PROJECT_SOURCES
@@ -22,8 +26,8 @@ set(PROJECT_SOURCES
         widget.cpp
         widget.h
         widget.ui
-        print.h
-        print.cpp
+        graph.h
+        graph.cpp
         printgraph.h
         printgraph.cpp
         dbmanager.h
@@ -55,6 +59,8 @@ endif()
 
 target_link_libraries(Lab_23_3 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(Lab_23_3 PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Quick Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(Lab_23_3 PRIVATE Qt${QT_VERSION_MAJOR}::Charts)
+
 
 set_target_properties(Lab_23_3 PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

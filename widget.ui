@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>836</width>
-    <height>715</height>
+    <width>1360</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>0</x>
      <y>0</y>
      <width>311</width>
-     <height>451</height>
+     <height>461</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -61,13 +61,6 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="Print_pushButton">
-      <property name="text">
-       <string>Print</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="SelectFolderToSavePdf_pushButton">
       <property name="text">
        <string>Select Folder to save PDF</string>
@@ -76,15 +69,16 @@
     </item>
    </layout>
   </widget>
-  <widget class="QGraphicsView" name="graphicsView">
+  <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>10</y>
-     <width>441</width>
-     <height>281</height>
+     <x>310</x>
+     <y>0</y>
+     <width>1051</width>
+     <height>461</height>
     </rect>
    </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2"/>
   </widget>
  </widget>
  <resources/>
