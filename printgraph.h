@@ -16,6 +16,13 @@ public:
     PrintGraph(const DbManager& Db);
     void saveAsPdf();
     QtCharts::QChartView *chartView;
+    ~PrintGraph();
+private:
+    QtCharts::QLineSeries *series;
+    QtCharts::QChart *chart;
+    QtCharts::QDateTimeAxis *axisX;
+    QtCharts::QValueAxis *axisY;
+
 };
 
 #endif // PRINTGRAPH_H
