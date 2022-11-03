@@ -14,7 +14,7 @@ class DbManager //Этот класс является менеджером ба
                 //выбранного типа графика.
 {
 public:
-    DbManager(const QString& path);
+    explicit DbManager(const QString& path);
     ~DbManager(); // Память я не выделял по этому деструктор не прописываю. Компилятор сам все сделает
     QMap<QString,float> map;
     // Вообще обращение к данным черех Db->map. Нужен ли метод для выдачи, или мап может оставаться публичным?

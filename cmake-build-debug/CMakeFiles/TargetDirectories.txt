@@ -1,0 +1,9 @@
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/Lab_23_3.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/install.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/install/local.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/Lab_23_3_autogen_timestamp_deps.dir
+/home/sergey/C_or_C++_projects/Lab_23_3/cmake-build-debug/CMakeFiles/Lab_23_3_autogen.dir

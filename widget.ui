@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1360</width>
-    <height>453</height>
+    <height>824</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -67,6 +67,13 @@
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="clear_pushButton">
+      <property name="text">
+       <string>Clear</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
@@ -75,7 +82,7 @@
      <x>310</x>
      <y>0</y>
      <width>1051</width>
-     <height>461</height>
+     <height>821</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2"/>

@@ -32,7 +32,7 @@ set(PROJECT_SOURCES
         printgraph.cpp
         dbmanager.h
         dbmanager.cpp
-)
+        printHist.cpp printHist.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Lab_23_3

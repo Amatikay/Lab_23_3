@@ -13,7 +13,7 @@ class PrintGraph : public Graph
 {
 public:
     PrintGraph();
-    PrintGraph(const DbManager& Db);
+    explicit PrintGraph(const DbManager& Db);
     void saveAsPdf();
     QtCharts::QChartView *chartView;
     ~PrintGraph();
