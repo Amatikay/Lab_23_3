@@ -17,8 +17,8 @@
 class printHist:public Graph {
 public:
     printHist();
-    explicit printHist(const DbManager& Db);
-    QtCharts::QChartView *chartView;
+    explicit printHist(const QMap<QString,float> &map,const QString &tableName);
+
     ~printHist();
 private:
     QtCharts::QBarSet *dataSet;

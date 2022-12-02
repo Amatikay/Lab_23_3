@@ -4,13 +4,13 @@
 
 DbManager::DbManager(const QString& path)
 {
-   m_db = QSqlDatabase::addDatabase("QSQLITE");
+   m_db = QSqlDatabase::addDatabase("QSQLITE","DataBase_Openend_in_Db_Manager");
    m_db.setDatabaseName(path);
    this->path=path;
 
    if (!m_db.open())
    {
-      qDebug() << m_db.lastError().text();// Должно быть так, но я не раборался с дебагером в qt  по этому добалю 2 строки ниже
+      qDebug() << m_db.lastError().text();// Должно быть так, но я не разобрался с дебагером в qt  по этому добавлю 2 строки ниже
 //      QTextStream out(stdout);
 //      out << m_db.lastError().text() << Qt::endl;
    }
@@ -33,4 +33,9 @@ DbManager::DbManager(const QString& path)
    while(query.next()){
        map.insert(query.value(0).toString(), query.value(1).toFloat());
    }
+}
+DbManager::~DbManager() {
+
+    m_db.close();
+    QSqlDatabase::removeDatabase("DataBase_Openend_in_Db_Manager");
 }

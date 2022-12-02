@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-    qDebug() << "Application stertup";
+    qDebug() << "Application startup";
     QApplication a(argc, argv);
     Widget w;
     w.show();

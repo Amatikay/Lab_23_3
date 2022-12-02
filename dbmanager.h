@@ -15,15 +15,17 @@ class DbManager //Этот класс является менеджером ба
 {
 public:
     explicit DbManager(const QString& path);
-    ~DbManager(); // Память я не выделял по этому деструктор не прописываю. Компилятор сам все сделает
-    QMap<QString,float> map;
-    // Вообще обращение к данным черех Db->map. Нужен ли метод для выдачи, или мап может оставаться публичным?
+    ~DbManager();
+    QMap<QString,float> returnMap(){return this->map;};
+    QString returnTableName(){return this->tableName;}
+    // Вообще обращение к данным через Db->map. Нужен ли метод для выдачи, или мап может оставаться публичным?TODO нужен
    // QString showName(){return tableName;}; разобраться что не так
-    QString tableName;
+
 private:
     QSqlDatabase m_db;
     QString path;
-   //QString tableName;
+    QMap<QString,float> map;
+   QString tableName;
 
 };
 

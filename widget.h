@@ -23,8 +23,8 @@ class Widget : public QWidget
     Q_OBJECT
 
 private slots:
-    void on_OpenFieleObserver_pushButton_clicked(); // открывалка фалового обозревателя
-    //void on_SelectFolderToSavePdf_pushButton_clicked();//выбор папки для сохрениния пдф
+    void on_OpenFieleObserver_pushButton_clicked(); // открывалка файлового обозревателя
+    //void on_SelectFolderToSavePdf_pushButton_clicked();//выбор папки для сохранения пдф
     //void on_graphicsView_rubberBandChanged(const QRect &viewportRect, const QPointF &fromScenePoint, const QPointF &toScenePoint);
     void on_clear_pushButton_clicked();
 

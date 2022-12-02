@@ -1,6 +1,9 @@
 #include "graph.h"
 
-Graph::Graph()
-{
+Graph::~Graph() {
+    delete chartView;
 
+    delete chart;
+
+    delete axisY;
 }

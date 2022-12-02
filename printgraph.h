@@ -13,16 +13,14 @@ class PrintGraph : public Graph
 {
 public:
     PrintGraph();
-    explicit PrintGraph(const DbManager& Db);
+    //explicit PrintGraph(const DbManager& Db);//переделываю
+    explicit PrintGraph(const QMap<QString,float> &map,const QString &tableName);
     void saveAsPdf();
-    QtCharts::QChartView *chartView;
+
     ~PrintGraph();
 private:
     QtCharts::QLineSeries *series;
-    QtCharts::QChart *chart;
     QtCharts::QDateTimeAxis *axisX;
-    QtCharts::QValueAxis *axisY;
-
 };
 
 #endif // PRINTGRAPH_H

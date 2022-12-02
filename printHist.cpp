@@ -7,28 +7,28 @@
 printHist::~printHist() {
     delete dataSet;
     delete series;
-    delete chart;
-    delete axisX;
+//    delete chart;
+//    delete axisX;
     delete axisY;
-    delete chartView;
+//    delete chartView;
 }
 
-printHist::printHist(const DbManager &Db) : dataSet(nullptr) {
-    dataSet = new QtCharts::QBarSet("Histogram from " + Db.tableName);
+printHist::printHist(const QMap<QString,float> &map,const QString &tableName) : dataSet(nullptr) {
+    dataSet = new QtCharts::QBarSet("Histogram from " + tableName);
     int i =0;
-    foreach (QString key, Db.map.keys()){
+    foreach (QString key, map.keys()){
             if (i>3){
                 break;
             }
             i++;
-        int value=Db.map.value(key);
+        int value=map.value(key);
         *dataSet << value;
     }
     series = new QtCharts::QBarSeries();
     series->append(dataSet);
     chart = new QtCharts::QChart();
     chart->addSeries(series);
-    chart->setTitle(Db.tableName);
+    chart->setTitle(tableName);
     chart->setAnimationOptions(SeriesAnimations);
     QStringList category;
     category << "date";

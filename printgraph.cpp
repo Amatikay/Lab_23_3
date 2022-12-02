@@ -4,18 +4,16 @@ PrintGraph::PrintGraph()
 {
 
 }
-PrintGraph::PrintGraph(const DbManager& Db)
+PrintGraph::PrintGraph(const QMap<QString,float> &map,const QString &tableName)
 {
-
-
     series = new QtCharts::QLineSeries();
     int i = 0; // "Костыль" для того, чтобы отображать не все данные в графике. Иначе он первращается в кашу.
-    foreach (QString key, Db.map.keys()){ //проходимя по всем элементам мапа (ключ:значение)
-       if (i>3){
+    foreach (QString key, map.keys()){ //проходимя по всем элементам мапа (ключ:значение)
+       if (i>1){
            break;
        }
        i++;
-        int value=Db.map.value(key);
+        int value=map.value(key);
 
         QDateTime momentInTime = QDateTime::fromString(key,"dd.MM.yyyy hh:mm");
         series->append(momentInTime.toMSecsSinceEpoch(),value);
@@ -25,7 +23,7 @@ PrintGraph::PrintGraph(const DbManager& Db)
 
     chart->addSeries(series);
     chart->legend()->hide();
-    chart->setTitle("Line Plot for Database: "+ Db.tableName);
+    chart->setTitle("Line Plot for Database: "+ tableName);
 
     axisX = new QtCharts::QDateTimeAxis;
     axisX->setTickCount(10);
@@ -45,9 +43,9 @@ PrintGraph::PrintGraph(const DbManager& Db)
  }
 
 PrintGraph::~PrintGraph() {
-    delete chartView;
+//    delete chartView;
     delete series;
-    delete chart;
+//    delete chart;
     delete axisX;
-    delete axisY;
+//    delete axisY;
 }
